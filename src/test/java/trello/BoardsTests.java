@@ -44,7 +44,7 @@ public class BoardsTests {
         driver.findElement(By.cssSelector("input[id='password'][aria-labelledby*='password']")).sendKeys("Stefany13091986");
         driver.findElement(By.cssSelector("button[id='login-submit']")).click();
         //Click on plus button
-        driver.findElement(By.cssSelector("button[data-testid *= 'create-menu' ]")).click();
+        driver.findElement(By.cssSelector("button[data-testid *= 'create-menu']")).click();
         //Click on Create Board option
         driver.findElement(By.cssSelector("section[data-testid*='create-menu'] button[data-testid*= 'create-board-button' ]")).click();
         //Set Board Name
@@ -60,7 +60,7 @@ public class BoardsTests {
         driver.findElement(By.cssSelector("button[data-testid*='create-board']")).click();
         //Validate the board name
         firstResult = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class*='mod-board-name'] h1")));
-        System.out.println(driver.findElement(By.cssSelector("div[class*='mod-board-name'] h1")).getText());
+        System.out.println(driver.findElement(By.cssSelector("div[data-testid='board-name-container'] h1")).getText());
     }
 
 }
